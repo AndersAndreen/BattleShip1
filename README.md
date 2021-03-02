@@ -7,7 +7,7 @@ Rules of the game:
 - A miss is represented by at dot.
 - If a boat is hit it sinks immediately and is displayed on screen as rows of X-es.
 
-
+This game is also a demonstration of how one can separate user input, game display and game logic. The game has two different input syntaxes and two different game boards that the player can switch back and forth whenever he/she likes while in the game without loosing data. This decoupling and flexibility is made possible by using interfaces and by injecting functions into other functions.
 
 
 
