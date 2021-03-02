@@ -1,5 +1,5 @@
 # Battleship 1
-A siplified version of the classic game Battleship.
+A C# console version of the classic game Battleship, with some slightly simplified rules.
 
 Rules of the game:
 - Boats are randomly placed on a 11x7 grid by the program.
