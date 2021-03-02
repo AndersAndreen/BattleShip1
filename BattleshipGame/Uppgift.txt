@@ -1,0 +1,176 @@
+﻿Introduktion
+============
+
+Det är väldigt svårt att bedöma någons praktiska kunskaper bara via ett CV och en intervju. Så syftet med denna uppgift är att få en bättre bild av din nuvarande och potentiella kompetens inom programmering och C#. Försök skapa en lättläst och objektorienterad lösning. Granska och refaktorera innan du skickar in. Hela uppgiften behöver inte vara löst.
+
+Se till att du har en egen katalog för hela Visual Studio-lösningen som du använder för att lösa uppgiften. När du är färdig med uppgiften zippar du hela katalogen så att du får en zip-fil som du kan lämna in. Därefter skickar du in via http://sendfiles.hv.se. Klicka på Drop-Off, välj utan ”Request code” och följ instruktionerna. Hittar du inte ditt verifieringsmejl så kika i skräpposten. Som mottagare anger du Simon och simon.danielsson@hv.se som mejladress.
+
+Uppgiften skall vara inlämnad senast den 2021-02-09 kl 21:00.
+
+Har du några frågor kring uppgiften kan du kontakta Simon Danielsson. I första hand på mejl till simon.danielsson@hv.se, och i andra hand på telefon 072-1600189. Skulle du inte ha möjlighet att sätta upp en utvecklingsmiljö eller av något annat skäl inte har möjlighet att genomföra uppgiften får du gärna också höra av dig så får vi se om vi kan hitta en alternativ väg framåt.
+
+Vi ser fram emot ditt svar som vi kommer kolla på tillsammans med din ansökan. Vår ambition är att kalla merparten av de som genomför övningen till intervju. Om du mot förmodan inte vill fullfölja är vi tacksamma om du återkopplar detta snarast.
+
+Utvecklingsmiljö
+================
+
+För att genomföra uppgiften krävs att du har tillgång till någon version av Visual Studio. Om du inte har det sedan tidigare kan vi rekommendera dig att installera Visual Studio Community som finns gratis.
+
+Uppgiftsbeskrivning
+===================
+
+Du ska skapa en kommandobaserad konsolapplikation i C#. Döp gärna din lösning till något som innehåller ditt namn. 
+Resultatet kommer vara en enklare variant av det klassiska papper och penna-spelet Sänka skepp.
+
+Det visade sig vid testimplementering av denna uppgift att den lätt drar ut på tiden. 
+Därför har vissa delar har markerats som "Extrauppgift" som man bör spara på och endast genomföra i mån av tid.
+
+Händelser
+=========
+
+- Vid ny spelomgång placeras 4 skepp av längderna 5, 4, 4 och 3 ut i horisontellt läge i ett rutnät på 11x7 rutor. 
+- Skeppens positioner är hårdkodade och samma varje spelomgång. 
+- [Extrauppgift 3: Skeppens positioner slumpas vid varje ny spelomgång.]
+
+- Om bomb placeras på koordinat med ett skepp sjunker hela skeppet.
+- Efter att bomb har placerats visas spelplanen så användaren kan se både de skepp som sjunkit 
+  och de koordinater som bombats men inte träffat något.
+- [Extrauppgift 1: När samtliga skepp har träffats är spelet slut och spelaren gratuleras.]
+
+Kommandon
+=========
+
+- e = Avslutar applikationen.
+- b <koordinat> = Placerar en bomb på angiven koordinat.
+- [Extrauppgift 2: n = Ger upp nuvarande spelomgång (visar var alla skepp fanns) och skapar en ny spelomgång.]
+
+Exempel på körning
+==================
+
+New game started. Please bomb all ships.
+  a b c d e f g h i j k
+1                       1
+2                       2
+3                       3
+4                       4
+5                       5
+6                       6
+7                       7
+  a b c d e f g h i j k
+
+> x
+Invalid command. Please try again.
+> b e1
+  a b c d e f g h i j k
+1         .             1
+2                       2
+3                       3
+4                       4
+5                       5
+6                       6
+7                       7
+  a b c d e f g h i j k
+
+> b e2
+  a b c d e f g h i j k
+1         .             1
+2       X X X           2
+3                       3
+4                       4
+5                       5
+6                       6
+7                       7
+  a b c d e f g h i j k
+
+> b e3
+  a b c d e f g h i j k
+1         .             1
+2       X X X           2
+3     X X X X           3
+4                       4
+5                       5
+6                       6
+7                       7
+  a b c d e f g h i j k
+
+> b e4
+  a b c d e f g h i j k
+1         .             1
+2       X X X           2
+3     X X X X           3
+4         .             4
+5                       5
+6                       6
+7                       7
+  a b c d e f g h i j k
+
+> b e5
+  a b c d e f g h i j k
+1         .             1
+2       X X X           2
+3     X X X X           3
+4         .             4
+5         .             5
+6                       6
+7                       7
+  a b c d e f g h i j k
+
+> b e6
+  a b c d e f g h i j k
+1         .             1
+2       X X X           2
+3     X X X X           3
+4         .             4
+5         .             5
+6         .             6
+7                       7
+  a b c d e f g h i j k
+
+> n
+  a b c d e f g h i j k
+1 S S S S .             1
+2       X X X           2
+3     X X X X           3
+4         .             4
+5         .             5
+6         .             6
+7             S S S S S 7
+  a b c d e f g h i j k
+
+New game started. Please bomb all ships.
+  a b c d e f g h i j k
+1                       1
+2                       2
+3                       3
+4                       4
+5                       5
+6                       6
+7                       7
+  a b c d e f g h i j k
+
+> e
+
+Kompletterande frågor
+=====================
+
+Skapa en text-fil i din lösning där du besvarar följande frågor. 
+
+1) Vad har du gjort för antaganden (som du inte tyckte framgick av uppgiftsbeskrivningen)?
+
+2) Något i din lösning som du vet inte fungerar enligt specifikationen?
+
+3) Har du behövt söka efter syntax/hjälp/idéer för att lösa något i din implementation?
+
+4) Hur utmanande tyckte du uppgiften var?
+
+5) Ungefär hur lång tid använde du för att lösa uppgiften (ej inräknat uppsättning av utvecklingsmiljö)?
+
+6) Något i din lösning du är missnöjd med?
+
+7) Något i din lösning du är extra nöjd med?
+
+8) Några andra kommentarer?
+
+Mvh Simon Danielsson
+Teamledare för Utvecklingsteamet
+Högskolan Väst
