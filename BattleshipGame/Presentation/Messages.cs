@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
 using BattleshipGame.GameLogic;
-using BattleshipGame.IO;
+using BattleshipGame.Input;
 
 namespace BattleshipGame.Presentation
 {

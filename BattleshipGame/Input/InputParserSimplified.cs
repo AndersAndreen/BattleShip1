@@ -1,8 +1,7 @@
 ﻿using System.Text.RegularExpressions;
 using BattleshipGame.GameLogic;
-using BattleshipGame.Presentation;
 
-namespace BattleshipGame.IO
+namespace BattleshipGame.Input
 {
     internal class InputParserSimplified
     {

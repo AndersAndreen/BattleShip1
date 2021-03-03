@@ -1,4 +1,4 @@
-﻿namespace BattleshipGame.IO
+﻿namespace BattleshipGame.Input
 {
     enum Syntax
     {

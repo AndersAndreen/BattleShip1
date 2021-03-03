@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace BattleshipGame.IO
+namespace BattleshipGame.Input
 {
     class KeyboardInput
     {

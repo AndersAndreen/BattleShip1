@@ -1,5 +1,5 @@
 using BattleshipGame.GameLogic;
-using BattleshipGame.IO;
+using BattleshipGame.Input;
 using FluentAssertions;
 using Xunit;
 

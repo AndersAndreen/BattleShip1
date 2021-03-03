@@ -1,7 +1,7 @@
 ﻿using BattleshipGame.GameLogic;
-using BattleshipGame.IO;
 using BattleshipGame.Presentation;
 using System;
+using BattleshipGame.Input;
 
 namespace BattleshipGame
 {
