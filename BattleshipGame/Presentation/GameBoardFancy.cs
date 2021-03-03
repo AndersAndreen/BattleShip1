@@ -22,7 +22,7 @@ namespace BattleshipGame.Presentation
         {
             var battlegroundMatrix = new char[7][];
             battlegroundMatrix = battlegroundMatrix.Select(column => new char[11]).ToArray();
-            attackCoordinates.ForEach(c => battlegroundMatrix[c.Row][c.Col] = '\u00b7');
+            attackCoordinates.ForEach(c => battlegroundMatrix[c.Row][c.Col] = '.');
             var sunken = battleships
                 .Where(ship => ship.IsSunken)
                 .ToList();
